@@ -1,0 +1,126 @@
+
+    
+  
+<div class="col-sm-6 jumbotron"  ng-controller="searchbloodcontroller" style="background-color: #e6e6e6; height: 495px " > 
+    <h3 style="text-align: center"><b>Search Donor</b></h3> 
+    <br>
+    <div class="col-md-6 col-md-offset-3" > 
+           
+
+<form name="form" ng-submit="showDonors()">
+         <div class="form-group">
+             <label for="Area"> Blood Group<span style="color: red"> *</span></label>
+             <select class="form-control" data-size="5" id="sell" ng-model="blood" required> 
+                 
+        <option value="" >Select </option> 
+        <option >A+</option>
+        <option>B+</option>
+        <option>0+</option>
+        <option>A-</option>
+        <option>B-</option>
+        <option>0-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+        <option>A</option>
+        
+                 </select>
+         </div>
+        
+        <div class="form-group">
+            <label for="Area">City <span style="color: red"> *</span></label>
+             <select class="form-control" data-size="5" id="sel1" ng-model="city" required> 
+                 <option value="">Select</option> 
+        <option >Hyderabad</option>
+        <option>Vijayawada</option>
+        <option>Guntur</option>
+        <option>Visakapatnam</option>
+        <option>Bhimavaram</option>
+       
+        
+                 </select>
+         </div>
+        <div class="form-group">
+            <label for="Hospitalname" >Hospital Name<span style="color: red"> *</span></label>
+            <input type="text" name="firstName" id="hospitalname" ng-model="hospital" class="form-control" required pattern="^[A-Za-z ]+" /> 
+        </div>
+        <div class="form-group">
+            <label for="Area">Area <span style="color: red"> *</span></label>
+            <input type="text" name="lastName" id="area" ng-model="area" class="form-control" required pattern="^[A-Za-z ]+" />
+        </div>
+            <div class="form-actions">
+            <button type="submit"  class="btn btn-primary">SEARCH</button>
+            </div>
+        </form>
+
+    </div>
+    </div>            
+        
+   <div class="col-sm-6">
+           
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+<!--        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+         <li data-target="#myCarousel" data-slide-to="2"></li>-->
+         <!--<li data-target="#myCarousel" data-slide-to="3"></li>-->
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="images/1.jpg" alt="Image">     
+        </div>
+
+        <div class="item">
+            <img src="images/3.png" alt="Image">
+              
+        </div>
+           <div class="item">
+               <img src="images/blo.jpg" alt="Image">
+              
+        </div>
+       
+      </div>
+
+      <!-- Left and right controls -->
+<!--      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>-->
+    </div>
+    
+</div>
+     
+<!--  <div class="container ">
+      
+      <div class="row">
+          <div class="col-md-12 jumbotron"  style="background-color:  #e6fffa">
+                    <form class="benifits">
+                        <p>Health Benefits Of Donating Blood</p>
+         <ul>
+            <li>
+                Anti-cancer benefits
+            </li>
+            <li>Healthy heart and liver</li>
+            <li> Weight loss</li>
+            <li>New blood cells</li>
+            <li>Hemochromatosis</li>
+        </ul>
+    </form>
+    </div>-->
+            
+ <script>
+         var $item = $('.carousel .item'); 
+         $item.eq(0).addClass('active');
+         $item.addClass('full-screen');
+         
+         $('.carousel').carousel({
+           interval: 2000,
+           pause: "false"
+         });
+      </script>   
+   

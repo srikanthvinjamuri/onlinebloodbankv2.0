@@ -1,0 +1,42 @@
+
+
+<div ng-app="Demo"  ng-controller="empController" ng-init="getEmployees()">
+<table class="table table-bordered" >
+	<thead>
+	<tr>
+	  <th>Name</th>
+	  <th>gender</th>
+	  <th>blood group</th>
+            <th>phone</th>
+	  <th>weight</th>
+	  <th>age</th>
+            <th>city</th>
+	  <th>area</th>
+	  <th>email</th>
+            <th>password</th>
+          
+
+	  <th>Actions</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="user in users | filter:search">
+	  <td>{{ user.name }}</td>
+	  <td>{{ user.gender }}</td>
+	  <td>{{ user.blood }}</td>
+          <td>{{ user.phone }}</td>
+	  <td>{{ user.weight}}</td>
+	  <td>{{ user.age }}</td>
+          <td>{{ user.city }}</td>
+	  <td>{{ user.area }}</td>
+	  <td>{{ user.email }}</td>
+           <td>{{ user.password }}</td>
+	  <td> 
+<!--	    <a href="#/employees/{{user.id}}/show" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"> Show  </a>-->
+	    <a href="#/employees/{{user.id}}/edit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent1"> Edit  </a>
+	  	<a ng-click="deleteEmployee(user.id)" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Delete </a>
+	  </td>
+	</tr>
+	</tbody>
+</table>
+</div>

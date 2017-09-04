@@ -1,0 +1,20 @@
+a {
+	text-decoration: none !important;
+}
+.mdl-button--accent1 {
+	color: rgb(255,255,255);
+	background-color: #46B6AC !important;
+}
+.mdl-button--accent {
+	color: rgb(255,255,255);
+	background-color: #FF897D !important;
+}
+.navbar-nav>li>a{
+	color: #fff !important;
+}
+.navbar-nav>li>a:hover{
+	color: #00FFFF !important;
+}
+.panel-heading{
+background-color: #FFF !important;	
+}

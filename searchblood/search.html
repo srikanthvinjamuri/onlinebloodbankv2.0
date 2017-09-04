@@ -1,0 +1,58 @@
+
+<div  style="height: 495px;" > 
+    <h3 style="text-align: center"><b>Search Donor</b></h3> 
+    <br>
+    
+    <div class="col-md-6 col-md-offset-3 jumbotron"  ng-controller="searchbloodcontroller" style="background-color:#e6e6e6">     
+    <form name="form" ng-submit="showDonors()">
+         <div class="form-group">
+             <label for="Area"> Blood Group<span style="color: red"> *</span></label>
+             <select class="form-control"  name="combo1" ng-model="blood" required> 
+                 
+        <option value="">Select </option> 
+        <option >A+</option>
+        <option>B+</option>
+        <option>0+</option>
+        <option>A-</option>
+        <option>B-</option>
+        <option>0-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+        <option>A</option>
+        
+                 </select>
+                 <span class="error" ng-show="form.combo1.$dirty && form.combo1.$invalid">Select required bloodgroup</span>
+         </div>
+        
+        <div class="form-group">
+            <label for="Area">City <span style="color: red"> *</span></label>
+             <select class="form-control"  id="sel1" name="combo2" ng-model="city" required> 
+         <option value="">Select</option> 
+        <option >Hyderabad</option>
+        <option>Vijayawada</option>
+        <option>Guntur</option>
+        <option>Visakapatnam</option>
+        <option>Bhimavaram</option>
+       
+        
+                 </select>
+            <span class="error" ng-show="form.combo2.$dirty && form.combo2.$invalid">Select city</span>
+         </div>
+        <div class="form-group">
+            <label for="Hospitalname" >Hospital Name<span style="color: red"> *</span></label>
+            <input type="text" name="firstName" id="hospitalname" ng-model="hospital" class="form-control" required pattern="^[A-Za-z ]+" /> 
+        </div>
+        <div class="form-group">
+            <label for="Area">Area <span style="color: red"> *</span></label>
+            <input type="text" name="lastName" id="area" ng-model="area" class="form-control" required pattern="^[A-Za-z ]+" />
+        </div>
+            <div class="form-actions">
+            <button type="submit"  class="btn btn-primary">SEARCH</button>
+            </div>
+        </form>
+
+    </div>
+
+    </div>
+      
+    

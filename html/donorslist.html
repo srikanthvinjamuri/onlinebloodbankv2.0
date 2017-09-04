@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+    <style>
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+<div ng-app="Demo" class="col-md-10 col-md-offset-1"  ng-controller="seekerController" ng-init="getDonors()">
+<table class="table table-bordered" >
+	<thead>
+        <h1 style="color:red;">Donors list based on distance </h1>
+	<tr>
+	  <th>Name</th>
+	  <th>Blood Group</th>
+            <th>Phone</th>
+            
+	  <th>email</th> 
+          <th>Area</th>
+          <th>Distance from Your Location</th>
+<!--	  <th>Distance</th>
+           <th>Duration</th>-->
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="donor in donors | filter:search">
+	  <td>{{ donor.name }}</td> 
+	  <td>{{ donor.blood }}</td>
+          <td>{{ donor.phone }}</td>
+	  <td>{{ donor.email }}</td>
+          <td>{{donor.area}}</td>
+          <td>{{donor.distance}}<span style="color:red">  &nbsp;&nbsp; Kms</span></td>
+<!--          <td>{{ donor.distance }}</td>
+          <td>{{donor.duration}}</td>-->
+	  <!--<td>--> 
+<!--	    <a href="#/employees/{{user.id}}/show" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"> Show  </a>-->
+<!--	  	<a ng-click="deleteEmployee(user.id)" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">go back </a>-->
+	  <!--</td>-->
+	</tr>
+	</tbody>
+</table>
+</div>
+<div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+

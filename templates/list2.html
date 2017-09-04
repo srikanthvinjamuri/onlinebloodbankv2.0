@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+ .user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{
+    margin-top:20px;
+}
+</style>
+<div class="container"  ng-app="Demo"  ng-controller="empController" ng-init="getEmployees()">
+      <div class="row">
+<!--      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+           <A href="edit.html" >Edit Profile</A>
+
+        <A href="edit.html" >Logout</A>
+       <br>
+<p class=" text-info">May 05,2014,03:00 pm </p>
+      </div>-->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Profile</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img  src="images/images.png" class=" img-responsive"> </div>
+         
+                
+                
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr ng-repeat="user in users | filter:search">
+                     <td>Name:</td>
+                     <td>{{ user.name }}</td>
+                      </tr>
+                      <tr ng-repeat="user in users | filter:search">
+                        <td>Gender:</td>
+                        <td>{{ user.gender }}</td>
+                      </tr>
+                      <tr  ng-repeat="user in users | filter:search">
+                        <td>blood group:</td>
+                        <td>{{ user.blood }}</td>
+                      </tr>
+                   
+                      <tr  ng-repeat="user in users | filter:search">
+                         <td>Mobile Number:</td>
+                         <td>{{ user.phone }}</td>
+                      </tr>
+                       <tr  ng-repeat="user in users | filter:search">
+                         <td>Weight:</td>
+                         <td>{{ user.weight }}</td>
+                      </tr  >
+                        <tr ng-repeat="user in users | filter:search">
+                         <td>Age:</td>
+                         <td>{{ user.age }}</td>
+                      </tr>     
+                        
+                     
+                        <tr>
+                        <tr ng-repeat="user in users | filter:search">
+                         <td>Area:</td>
+                         <td>{{ user.area }}</td>
+                      </tr>
+                      <tr ng-repeat="user in users | filter:search">
+                         <td>City:</td>
+                         <td>{{ user.city }}</td>
+                      </tr> 
+                      
+                     
+                      <tr ng-repeat="user in users | filter:search">
+                        <td>Email:</td>
+                        <td>{{ user.email }}</td>
+                      </tr>
+                   
+                      <tr ng-repeat="user in users | filter:search">
+                          
+                    
+                          <td><a href="#/employees/{{user.id}}/edit" class="btn btn-primary">EDIT PROFILE</a></td>
+                          &nbsp;&nbsp;&nbsp;&nbsp; <td> <a ng-click="deleteEmployee(user.id)" class="btn btn-primary">REMOVE IF NOT INTERESTED</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                    
+                 
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                      
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+    $(document).ready(function() {
+    var panels = $('.user-infos');
+    var panelsButton = $('.dropdown-user');
+    panels.hide();
+
+    //Click dropdown
+    panelsButton.click(function() {
+        //get data-for attribute
+        var dataFor = $(this).attr('data-for');
+        var idFor = $(dataFor);
+
+        //current button
+        var currentButton = $(this);
+        idFor.slideToggle(400, function() {
+            //Completed slidetoggle
+            if(idFor.is(':visible'))
+            {
+                currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
+            }
+            else
+            {
+                currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+            }
+        })
+    });
+
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('button').click(function(e) {
+        e.preventDefault();
+        alert("This is a demo.\n :-)");
+    });
+});
+    </script>

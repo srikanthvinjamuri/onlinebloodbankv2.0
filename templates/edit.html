@@ -1,0 +1,57 @@
+<div class="panel panel-default" ng-init="showEmployee()">
+	<div class="panel-heading">
+	  <p class="panel-title"><span style="color:#5bc0de;" class="glyphicon glyphicon-edit"> </span> Edit Employee</p>
+	</div>
+	<div class="panel-body">
+		<form ng-submit="updateEmployee(user)">
+    
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" ng-model="user.name">
+    </div>
+    
+    <div class="form-group">
+      <label for="dept">gender:</label>
+      <input type="text" class="form-control" id="gender" ng-model="user.gender">
+    </div>
+    
+    <div class="form-group">
+      <label for="area">blood:</label>
+      <input type="text" class="form-control" id="blood" ng-model="user.blood">
+    </div>
+
+    <div class="form-group">
+      <label for="status">phone:</label>
+      <input type="text" class="form-control" id="phone" ng-model="user.phone">
+    </div>
+    
+    <div class="form-group">
+      <label for="contact">weight :</label>
+      <input type="text" class="form-control" id="weight" ng-model="user.weight">
+    </div>
+
+    <div class="form-group">
+      <label for="salary">age:</label>
+      <input type="text" class="form-control" id="age" ng-model="user.age">
+    </div>
+     <div class="form-group">
+      <label for="salary">city:</label>
+      <input type="text" class="form-control" id="city" ng-model="user.city">
+    </div>     
+    <div class="form-group">
+      <label for="salary">area:</label>
+      <input type="text" class="form-control" id="area" ng-model="user.area">
+    </div>
+    <div class="form-group">
+      <label for="salary">email:</label>
+      <input type="text" class="form-control" id="email" ng-model="user.email">
+    </div>
+                    <div class="form-group">
+<!--      <label for="salary">password:</label>
+      <input type="text" class="form-control" id="password" ng-model="user.password">-->
+    </div>
+    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Update</button>
+    <a href="#/userdashboard" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"> Close</a>
+</form>	
+    <div>
+<div>	

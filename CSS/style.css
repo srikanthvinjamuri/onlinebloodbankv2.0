@@ -1,0 +1,93 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 May, 2017, 9:49:38 PM
+    Author     : anil
+*/
+.header { width: 800px; height: 80px; text-align: center; background-color: #BDBDBD;
+}
+
+.none{display: none;}
+
+/* optional styles */
+table tr th, table tr td{font-size: 1.2rem;}
+.row{ margin:20px 20px 20px 20px;width: 100%;}
+.glyphicon{font-size: 20px;}
+.glyphicon-plus{float: right;}
+a.glyphicon{text-decoration: none;cursor: pointer;}
+.glyphicon-trash{margin-left: 10px;}
+.alert{
+    width: 50%;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.leftMenu { height: 500px; background-color: #D8D8D8; width: 150px;
+}
+
+.mainContent { height: 500px; background-color: #E6E6E6; width: 650px;
+}
+
+a{ display:block; padding:0px
+}
+* {
+    box-sizing: border-box;
+}
+
+#logo{
+    
+    float:left;
+    width:15%;
+}
+#quateimage{
+    
+    float:none;
+   /* width:50%;*/
+  
+}
+#container1{width:100%;
+margin-left:28%}
+option { font-size:20px; 
+}
+select {
+    height:20px;
+    overflow-y:scroll; 
+}
+@media (max-width: 580px) {
+    #something {
+      padding-left:0;
+      margin:0;
+    }
+}
+
+.body{
+background-image : url(images/blo.jpg); 
+background-repeat: no-repeat; 
+/*background-position: center center;*/
+
+}
+.divele {
+    background-color: lightblue;
+}
+
+.benifits
+{
+    font-size: 20px;
+    font-weight: bold;
+    align: center;
+}
+
+
+.carousel-inner img{
+    width:100%;
+    min-height:500px;
+}
+@media (max-width:600px){
+    .carousel-caption{
+        display: none;
+    }
+}
